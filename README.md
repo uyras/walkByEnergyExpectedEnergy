@@ -19,13 +19,33 @@
 Далее графики для одной системы, по 1000 случайных экспериментов каждом.
 Графики наложены друг на друга.
 
-![e](e1.png)
-![e](e2.png)
-![e](e3.png)
-![e](e4.png)
-![e](e5.png)
-![e](e6.png)
-![e](e7.png)
-![e](e8.png)
-![e](e9.png)
-![e](e10.png)
+![e](res/e1.png)
+![e](res/e2.png)
+![e](res/e3.png)
+![e](res/e4.png)
+![e](res/e5.png)
+![e](res/e6.png)
+![e](res/e7.png)
+![e](res/e8.png)
+![e](res/e9.png)
+![e](res/e10.png)
+Данные хранятся в файлах data/energyN.dat
+
+### Эксперимент 2
+Рассматриваеются 10 случайных систем из *20* случайно упорядоченных частиц.
+Магнитный момент *1*.
+Двумерная система с квадратной подложкой *10х10*.
+Плотность заполнения образца составляет *0.10472*.
+Перебираются все состояния и строится статистика энергии таких состояний.
+
+![e](res/e_min_max1.png)
+![e](res/e_min_max2.png)
+![e](res/e_min_max3.png)
+![e](res/e_min_max4.png)
+![e](res/e_min_max5.png)
+![e](res/e_min_max6.png)
+![e](res/e_min_max7.png)
+![e](res/e_min_max8.png)
+![e](res/e_min_max9.png)
+![e](res/e_min_max10.png)
+Данные хранятся в файлах data/allEnergyN.dat

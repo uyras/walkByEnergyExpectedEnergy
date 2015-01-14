@@ -29,7 +29,7 @@ int main()
     config::Instance()->randmode_standart();
     config::Instance()->srand(time(NULL));
 
-    PartArray *a = new PartArray("10_10_40_1.dat");
+    PartArray *a = new PartArray("10_10_20_1.dat");
     config::Instance()->ergGauss = 3e7 * 9274e-24; //3*10^-7 - намагниченность одной частицы (магн. Бора), 9274e-24 - эрг/Гс в обном Боре
 
     cout<<"destiny - "<<a->destiny()<<endl;
@@ -42,7 +42,7 @@ int main()
     //Считаем начальную энергию
     double Einit = a->calcEnergy1FastIncrementalFirst();
 
-    ofstream f1,f2;
+    /*ofstream f1,f2;
     for (int experiment=1;experiment<=10;experiment++){
         {
             stringstream fname;
@@ -63,6 +63,27 @@ int main()
                 a->state->reset();
             }
         }
+        f1.close();
+    }*/
+
+    ofstream f1;
+    for (int experiment=1;experiment<=10;experiment++){
+        delete a;
+        a = new PartArray(10,10,1,20);
+        a->turnUp();
+        a->state->hardReset();
+        Einit = a->calcEnergy1FastIncrementalFirst();
+        {
+
+            stringstream fname;
+            fname<<"allEnergy"<<experiment<<".dat";
+
+            const std::string& tmp = fname.str();
+            f1.open(tmp.c_str());
+        }
+        do {
+            f1<<spinExcess(a)<<"\t"<<a->calcEnergy1FastIncremental(Einit)<<endl;
+        } while (a->state->next());
         f1.close();
     }
 

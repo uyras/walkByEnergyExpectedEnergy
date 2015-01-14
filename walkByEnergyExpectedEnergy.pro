@@ -18,4 +18,5 @@ PRE_TARGETDEPS += $$PWD/../partsEngine/libPartsEngine.a
 
 DISTFILES += \
     README.md \
-    10_10_40_1.dat
+    10_10_40_1.dat \
+    make_e_graph.py
