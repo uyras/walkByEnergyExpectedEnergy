@@ -29,18 +29,18 @@ int main()
     config::Instance()->randmode_standart();
     config::Instance()->srand(time(NULL));
 
-    PartArray *a = new PartArray("10_10_20_1.dat");
+    //PartArray *a = new PartArray("10_10_20_1.dat");
     config::Instance()->ergGauss = 3e7 * 9274e-24; //3*10^-7 - намагниченность одной частицы (магн. Бора), 9274e-24 - эрг/Гс в обном Боре
 
-    cout<<"destiny - "<<a->destiny()<<endl;
-    cout<<"count - "<<a->count()<<endl;
+    //cout<<"destiny - "<<a->destiny()<<endl;
+    //cout<<"count - "<<a->count()<<endl;
 
     //поворачиваем все вверх
-    a->turnUp();
-    a->state->hardReset();
+    //a->turnUp();
+    //a->state->hardReset();
 
     //Считаем начальную энергию
-    double Einit = a->calcEnergy1FastIncrementalFirst();
+    double Einit;// = a->calcEnergy1FastIncrementalFirst();
 
     /*ofstream f1,f2;
     for (int experiment=1;experiment<=10;experiment++){
@@ -65,18 +65,18 @@ int main()
         }
         f1.close();
     }*/
-
+    PartArray *a;
     ofstream f1;
     for (int experiment=1;experiment<=10;experiment++){
-        delete a;
         a = new PartArray(10,10,1,20);
+        cout<<a->destiny()<<endl;
         a->turnUp();
         a->state->hardReset();
         Einit = a->calcEnergy1FastIncrementalFirst();
         {
 
             stringstream fname;
-            fname<<"allEnergy"<<experiment<<".dat";
+            fname<<"allEnergy"<<experiment<<"_1.dat";
 
             const std::string& tmp = fname.str();
             f1.open(tmp.c_str());
@@ -84,10 +84,12 @@ int main()
         do {
             f1<<spinExcess(a)<<"\t"<<a->calcEnergy1FastIncremental(Einit)<<endl;
         } while (a->state->next());
+
         f1.close();
+        delete a;
     }
 
-    cout << "Hello World!" << endl;
+    cout << "Ahoa!" << endl;
     return 0;
 }
 

@@ -38,14 +38,30 @@
 Плотность заполнения образца составляет *0.10472*.
 Перебираются все состояния и строится статистика энергии таких состояний.
 
-![e](res/e_min_max1.png)
-![e](res/e_min_max2.png)
-![e](res/e_min_max3.png)
-![e](res/e_min_max4.png)
-![e](res/e_min_max5.png)
-![e](res/e_min_max6.png)
-![e](res/e_min_max7.png)
-![e](res/e_min_max8.png)
-![e](res/e_min_max9.png)
-![e](res/e_min_max10.png)
-Данные хранятся в файлах data/allEnergyN.dat
+![e](res/e_min_max_1_1.png)
+![e](res/e_min_max_1_2.png)
+![e](res/e_min_max_1_3.png)
+![e](res/e_min_max_1_4.png)
+![e](res/e_min_max_1_5.png)
+![e](res/e_min_max_1_6.png)
+![e](res/e_min_max_1_7.png)
+![e](res/e_min_max_1_8.png)
+![e](res/e_min_max_1_9.png)
+![e](res/e_min_max_1_10.png)
+Данные хранятся в файлах data/allEnergy1_N.dat
+
+### Эксперимент 3
+Аналогично эксперименту 2, только подложка размером *6х6*.
+Плотность заполнения образца составляет *0.436332*.
+
+![e](res/e_min_max_2_1.png)
+![e](res/e_min_max_2_2.png)
+![e](res/e_min_max_2_3.png)
+![e](res/e_min_max_2_4.png)
+![e](res/e_min_max_2_5.png)
+![e](res/e_min_max_2_6.png)
+![e](res/e_min_max_2_7.png)
+![e](res/e_min_max_2_8.png)
+![e](res/e_min_max_2_9.png)
+![e](res/e_min_max_2_10.png)
+Данные хранятся в файлах data/allEnergy2_N.dat

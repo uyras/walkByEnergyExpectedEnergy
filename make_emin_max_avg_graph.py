@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 for i in range(1,11):
-    a = np.loadtxt("data/allEnergy"+str(i)+".dat")
+    a = np.loadtxt("data/allEnergy"+str(i)+"_1.dat")
     mins = {}
     maxs = {}
     avgs = {}
@@ -33,4 +33,5 @@ for i in range(1,11):
     plt.xlabel(u'spin excess')
     plt.ylabel(u'energy')
     plt.legend()
-    plt.savefig("res/e_min_max"+str(i)+".png",dpi=300);
+    plt.xlim(-21,30)
+    plt.savefig("res/e_min_max_1_"+str(i)+".png",dpi=300);
